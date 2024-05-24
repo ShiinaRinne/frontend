@@ -653,7 +653,7 @@ class NavbarCompoment extends Component {
                                     })}
                                 </Typography>
                             )}
-                        {this.props.selected.length === 0 && <SezrchBar />}
+                        {Auth.Check(this.props.isLogin) && (this.props.selected.length === 0 && <SezrchBar />)}
                         <div className={classes.grow} />
                         {this.props.selected.length > 0 &&
                             (isHomePage || isSharePage) && (
